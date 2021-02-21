@@ -1,6 +1,51 @@
-<h1>Hello poo</h1>
-<p> Und hier erscheint der Text.</p>
-<p> This is the second line </p>
-<p> New Text </p>
+<!DOCTYPE html>
+<html>
 
-<img src="EM120091.JPG" width="200px">
+<head>
+  <meta charset="utf-8">
+  <title>My Interactive Story</title>
+</head>
+
+<body>
+  <h1>My Christmas Story</h1>
+
+  <img src="Artstart.jpeg" width="400px">
+
+  <button id="wayOne" type="button">Proportion</button>
+  <button id="wayTwo" type="button">Movement</button>
+  <button id="wayThree" type="button">Emphasis</button>
+  <div>
+    <img id="pic" src="" width="200px">
+    <p id="story"></p>
+  </div>
+
+  <script>
+    var text1, image1;
+
+    function setStory(text, image) {
+      document.getElementById('story').innerHTML = text;
+      document.getElementById('pic').src = image;
+    }
+
+    document.getElementById('wayOne').onclick = function() {
+      text1 = "The books are totally proportional with 2 on the top perfectly aligned with each other and 1 on the bottom placed exactly in the middle.
+";
+      image1 = "EM120091.JPG";
+      setStory(text1, image1);
+    }
+
+    document.getElementById('wayTwo').onclick = function() {
+      text1 = "The book is captured in mid movement as it is thrown into the air. This effect may be used to blur the image or give the image effect.";
+      image1 = "EM120109.JPG";
+      setStory(text1, image1);
+    }
+
+    document.getElementById('wayThree').onclick = function() {
+      text1 = "In the image the blue yellow book in the image and is the only book in the full shot. The blue yellow book is also placed in the middle to make the eye look at it first.";
+      image1 = "EM120092.JPG";
+      setStory(text1, image1);
+    }
+  </script>
+</body>
+
+</html>
