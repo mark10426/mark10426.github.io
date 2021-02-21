@@ -9,99 +9,113 @@
       background-color: powderblue;
     }
 
-    .flex-container {
-      display: flex;
-      flex-direction: column;
-      padding: 50px;
-    }
-
     .flex-button {
       display: flex;
       flex-direction: column;
+      padding: 10px;
+    }
+
+    button {
       padding 10px;
+      width: 100px;
+      height: 50px;
       background-color: green;
-      width: 400px;
-      height: 100px;
     }
 
-    .butcol {
+    .block1 {
+      background-color: orange;
+      padding: 10px;
+    }
+
+    .block2 {
+      display: flex;
+      flex-direction: row;
+      padding 10px;
       background-color: orange;
     }
 
-    #story {
-      background-color: orange;
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #pic {
+      padding: 10px;
     }
   </style>
 </head>
 
 <body>
   <h1>Art</h1>
-  <div class="flex-container">
-
-    <img src="Artstart.jpeg" width="400px">
-    <div class="flex-button">
-      <button id="wayOne" class="butcol" type="button">Proportion</button>
-      <button id="wayTwo" class="butcol" type="button">Movement</button>
-      <button id="wayThree" class="butcol" type="button">Emphasis</button>
-      <button id="wayFour" class="butcol" type="button">Balance</button>
-      <button id="wayFive" class="butcol" type="button">Variety</button>
-      <button id="waySix" class="butcol" type="button">Pattern</button>
-      <button id="waySeven" class="butcol" type="button">Unity</button>
-
-      <img id="pic" src="" width="400px">
-      <p id="story"></p>
+  <div>
+    <div class="block1">
+      <img src="Artstart.jpeg" width="400px">
     </div>
-  </div>
-  <script>
-    var text1, image1;
+    <div class="block2">
+      <div class="flex-button">
+        <button id="wayOne" type="button">Proportion</button>
+        <button id="wayTwo" type="button">Movement</button>
+        <button id="wayThree" type="button">Emphasis</button>
+        <button id="wayFour" type="button">Balance</button>
+        <button id="wayFive" type="button">Variety</button>
+        <button id="waySix" type="button">Pattern</button>
+        <button id="waySeven" type="button">Unity</button>
+      </div>
+      <div class=content>
+        <img id="pic" src="" width="400px">
+        <p id="story"></p>
+      </div>
+    </div>
+    <script>
+      var text1, image1;
 
-    function setStory(text, image) {
-      document.getElementById('story').innerHTML = text;
-      document.getElementById('pic').src = image;
-    }
+      function setStory(text, image) {
+        document.getElementById('story').innerHTML = text;
+        document.getElementById('pic').src = image;
+      }
 
-    document.getElementById('wayOne').onclick = function() {
-      text1 = "The books are totally proportional with 2 on the top perfectly aligned with each other and 1 on the bottom placed exactly in the middle.";
-      image1 = "EM120091.JPG";
-      setStory(text1, image1);
-    }
+      document.getElementById('wayOne').onclick = function() {
+        text1 = "The books are totally proportional with 2 on the top perfectly aligned with each other and 1 on the bottom placed exactly in the middle.";
+        image1 = "EM120091.JPG";
+        setStory(text1, image1);
+      }
 
-    document.getElementById('wayTwo').onclick = function() {
-      text1 = "The book is captured in mid movement as it is thrown into the air. This effect may be used to blur the image or give the image effect.";
-      image1 = "EM120109.JPG";
-      setStory(text1, image1);
-    }
+      document.getElementById('wayTwo').onclick = function() {
+        text1 = "The book is captured in mid movement as it is thrown into the air. This effect may be used to blur the image or give the image effect.";
+        image1 = "EM120109.JPG";
+        setStory(text1, image1);
+      }
 
-    document.getElementById('wayThree').onclick = function() {
-      text1 = "In the image the blue yellow book in the image and is the only book in the full shot. The blue yellow book is also placed in the middle to make the eye look at it first.";
-      image1 = "EM120092.JPG";
-      setStory(text1, image1);
-    }
+      document.getElementById('wayThree').onclick = function() {
+        text1 = "In the image the blue yellow book in the image and is the only book in the full shot. The blue yellow book is also placed in the middle to make the eye look at it first.";
+        image1 = "EM120092.JPG";
+        setStory(text1, image1);
+      }
 
-    document.getElementById('wayFour').onclick = function() {
-      text1 = "In this photo this is perfect balance in between the books as there is exactly 1 book on each side.";
-      image1 = "EM120112.JPG";
-      setStory(text1, image1);
-    }
+      document.getElementById('wayFour').onclick = function() {
+        text1 = "In this photo this is perfect balance in between the books as there is exactly 1 book on each side.";
+        image1 = "EM120112.JPG";
+        setStory(text1, image1);
+      }
 
-    document.getElementById('wayFive').onclick = function() {
-      text1 = "There is a whole variety of groups they are ordered in color and non colored.";
-      image1 = "EM120114.JPG";
-      setStory(text1, image1);
-    }
+      document.getElementById('wayFive').onclick = function() {
+        text1 = "There is a whole variety of groups they are ordered in color and non colored.";
+        image1 = "EM120114.JPG";
+        setStory(text1, image1);
+      }
 
-    document.getElementById('waySix').onclick = function() {
-      text1 = "There is a pattern in the books to both show them and make them look presentable and nice.";
-      image1 = "EM120116.JPG";
-      setStory(text1, image1);
-    }
+      document.getElementById('waySix').onclick = function() {
+        text1 = "There is a pattern in the books to both show them and make them look presentable and nice.";
+        image1 = "EM120116.JPG";
+        setStory(text1, image1);
+      }
 
-    document.getElementById('waySeven').onclick = function() {
-      text1 = "The books are all joined and united making the viewer look at all books as they are united and there is no significant book out of them.";
-      image1 = "EM120124.JPG";
-      setStory(text1, image1);
-    }
-  </script>
+      document.getElementById('waySeven').onclick = function() {
+        text1 = "The books are all joined and united making the viewer look at all books as they are united and there is no significant book out of them.";
+        image1 = "EM120124.JPG";
+        setStory(text1, image1);
+      }
+    </script>
 </body>
 
 </html>
