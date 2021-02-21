@@ -4,25 +4,54 @@
 <head>
   <meta charset="utf-8">
   <title>My Interactive Story</title>
+  <style>
+    body {
+      background-color: powderblue;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+    }
+
+    .flex-button {
+      display: flex;
+      flex-direction: column;
+      padding 10px;
+      background-color: green;
+      width: 400px;
+      height: 100px;
+    }
+
+    .butcol {
+      background-color: orange;
+    }
+
+    #story {
+      background-color: orange;
+    }
+  </style>
 </head>
 
 <body>
   <h1>Art</h1>
+  <div class="flex-container">
 
-  <img src="Artstart.jpeg" width="400px">
+    <img src="Artstart.jpeg" width="400px">
+    <div class="flex-button">
+      <button id="wayOne" class="butcol" type="button">Proportion</button>
+      <button id="wayTwo" class="butcol" type="button">Movement</button>
+      <button id="wayThree" class="butcol" type="button">Emphasis</button>
+      <button id="wayFour" class="butcol" type="button">Balance</button>
+      <button id="wayFive" class="butcol" type="button">Variety</button>
+      <button id="waySix" class="butcol" type="button">Pattern</button>
+      <button id="waySeven" class="butcol" type="button">Unity</button>
 
-  <button id="wayOne" type="button">Proportion</button>
-  <button id="wayTwo" type="button">Movement</button>
-  <button id="wayThree" type="button">Emphasis</button>
-  <button id="wayFour" type="button">Balance</button>
-  <button id="wayFive" type="button">Variety</button>
-  <button id="waySix" type="button">Pattern</button>
-  <button id="waySeven" type="button">Unity</button>
-  <div>
-    <img id="pic" src="" width="400px">
-    <p id="story"></p>
+      <img id="pic" src="" width="400px">
+      <p id="story"></p>
+    </div>
   </div>
-
   <script>
     var text1, image1;
 
@@ -72,8 +101,6 @@
       image1 = "EM120124.JPG";
       setStory(text1, image1);
     }
-
-
   </script>
 </body>
 
